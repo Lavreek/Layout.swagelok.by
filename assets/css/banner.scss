@@ -1,0 +1,24 @@
+.banner {
+    background-image: url("/assets/main/banner-swagelok.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    .banner-container {
+        .banner-title {
+            padding-top: 50px;
+            padding-bottom: 10px;
+
+            font-weight: 600;
+            font-size: 41px;
+            line-height: 49px;
+
+            color: white;
+        }
+        .banner-text {
+            width: 500px;
+
+            font-size: 17px;
+            line-height: 20px;
+            color: white;
+        }
+    }
+}

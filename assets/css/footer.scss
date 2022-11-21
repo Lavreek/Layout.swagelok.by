@@ -1,0 +1,23 @@
+footer {
+    background: #004D9E;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    column-gap: 72px;
+}
+
+.footer-logo,
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+}
+
+.footer-logo {
+}
+.footer-contacts {
+
+}

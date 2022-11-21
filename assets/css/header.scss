@@ -1,0 +1,35 @@
+.header-divider, .header-container {
+    height: 122px;
+}
+
+header {
+    .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .header-contacts {
+            display: inherit;
+            flex-direction: row;
+            column-gap: 71px;
+
+            a {
+                color: black;
+            }
+
+            .contacts-mail {
+                text-align: right;
+                width: 213px;
+            }
+
+            .contacts-phone {
+                text-align: right;
+                width: 213px;
+            }
+        }
+    }
+
+    width: 100%;
+    transition: .5s;
+    position: fixed;
+}

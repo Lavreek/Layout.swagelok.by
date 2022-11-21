@@ -1,0 +1,80 @@
+body, header {
+    border: 0;
+    border-spacing: 0;
+    padding: 0;
+    margin: 0;
+}
+
+body, header {
+    max-width: 1920px;
+}
+
+p, a {
+    font-family: 'Rubik', Arial, sans-serif;
+    font-weight: 400;
+}
+
+p, a, ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+.how-to-offer-btn,
+.how-to-offer-btn-bottom {
+    margin: 45px 0;
+    padding: 15px 64px;
+    border-radius: 33px;
+    border: 0;
+    font-weight: 600;
+
+    transition: .5s;
+}
+
+.how-to-offer-btn-bottom {
+    color: white;
+    background: #66B645;
+
+    &:hover {
+        transition: .5s;
+        background: #004D9E;
+    }
+}
+
+.how-to-offer-btn {
+    color: #66B645;
+    background: white;
+
+
+    &:hover {
+        transition: .5s;
+        color: white;
+        background: #004D9E;
+    }
+}
+
+@media (max-width: 1920px) {
+    $padding-right: 407px;
+    $padding-left: 407px;
+
+    .header-container,
+    .banner-container,
+    .category-container,
+    .h-t-o-container,
+    .footer-container {
+        padding-left: $padding-left;
+        padding-right: $padding-right;
+    }
+
+    .how-to-offer-btn,
+    .how-to-offer-btn-bottom {
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
