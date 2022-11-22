@@ -1,31 +1,36 @@
-body, header {
+body {
+    all: unset;
+}
+body, header, p, a, ul {
+    padding: 0;
+}
+
+body, header, p, a, ul, li {
+    margin: 0;
+}
+
+body, header, p, a, ul, li, div {
     border: 0;
     border-spacing: 0;
-    padding: 0;
-    margin: 0;
 }
 
 body, header {
     max-width: 1920px;
 }
 
-p, a {
+p, a, label, div, ul, li {
     font-family: 'Rubik', Arial, sans-serif;
     font-weight: 400;
 }
 
-p, a, ul {
-    margin: 0;
-    padding: 0;
-}
-
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 ul {
     list-style: none;
 }
+
 .how-to-offer-btn,
 .how-to-offer-btn-bottom {
     margin: 45px 0;
@@ -51,7 +56,6 @@ ul {
     color: #66B645;
     background: white;
 
-
     &:hover {
         transition: .5s;
         color: white;
@@ -60,21 +64,73 @@ ul {
 }
 
 @media (max-width: 1920px) {
-    $padding-right: 407px;
-    $padding-left: 407px;
-
     .header-container,
     .banner-container,
     .category-container,
     .h-t-o-container,
     .footer-container {
-        padding-left: $padding-left;
-        padding-right: $padding-right;
+        padding-left: 21.19791666666667vw;
+        padding-right: 21.19791666666667vw;
     }
 
     .how-to-offer-btn,
     .how-to-offer-btn-bottom {
         font-size: 24px;
         line-height: 28px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .header-container,
+    .banner-container,
+    .category-container,
+    .h-t-o-container,
+    .footer-container {
+        padding-left: 12.84722222222222vw;
+        padding-right: 12.84722222222222vw;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header-container,
+    .banner-container,
+    .category-container,
+    .h-t-o-container,
+    .footer-container {
+        padding-left: 6.54296875vw;
+        padding-right: 6.54296875vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container,
+    .banner-container,
+    .category-container,
+    .h-t-o-container,
+    .footer-container {
+        padding-left: 8.07291666666667vw;
+        padding-right: 8.07291666666667vw;
+    }
+}
+
+@media (max-width: 425px) {
+    .header-container,
+    .banner-container,
+    .category-container,
+    .h-t-o-container,
+    .footer-container {
+        padding-left: 9.88235294117647vw;
+        padding-right: 9.88235294117647vw;
+    }
+}
+
+@media (max-width: 320px) {
+    .header-container,
+    .banner-container,
+    .category-container,
+    .h-t-o-container,
+    .footer-container {
+        padding-left: 6.25vw;
+        padding-right: 6.25vw;
     }
 }

@@ -13,3 +13,6 @@ const bootstrap = require('bootstrap');
 
 // start the Stimulus application
 import './bootstrap';
+import './js/scroll';
+import './js/sendOffer';
+

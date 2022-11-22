@@ -1,23 +1,97 @@
 footer {
     background: #004D9E;
-}
 
-.footer-container {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    column-gap: 72px;
-}
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 72px;
+        padding-top: 40px;
+        padding-bottom: 112px;
+        justify-content: space-between;
 
-.footer-logo,
-.footer-contacts {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
+        @media (max-width: 425px) {
+            align-items: center;
+            grid-template-columns: auto;
+            padding-bottom: 0;
+        }
 
-}
+        .footer-logo,
+        .footer-contacts,
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
-.footer-logo {
-}
-.footer-contacts {
+            @media (max-width: 425px) {
+                align-items: center;
+            }
+        }
 
+        .footer-logo {
+            .logo-img {
+                margin-bottom: 100px;
+                
+                @media (max-width: 425px) {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+
+        .footer-contacts {
+
+            @media (max-width: 425px) {
+                margin-bottom: 50px;
+            }
+
+            p {
+                margin: 5px 0;
+            }
+
+            .contacts-title {
+                color: white;
+                font-weight: 700;
+                font-size: 17px;
+                line-height: 21px;
+                margin-bottom: 50px;
+
+                @media (max-width: 425px) {
+                    margin-bottom: 20px;
+
+                }
+            }
+
+            .contacts-ref {
+
+                @media (max-width: 425px) {
+                    text-align: center;
+                }
+                .ref-title {
+                    color: white;
+                    font-weight: 700;
+                    font-size: 17px;
+                    line-height: 21px;
+                }
+
+                .ref-text {
+                    font-weight: 400;
+                    font-size: 17px;
+                    line-height: 21px;
+
+                    a {
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .footer-links {
+            a, p {
+                padding-bottom: 10px;
+                color: white;
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 15px;
+            }
+        }
+    }
 }

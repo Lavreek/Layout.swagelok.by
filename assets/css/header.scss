@@ -1,15 +1,47 @@
-.header-divider, .header-container {
-    height: 122px;
+.header-h {
+    height: 66px;
 }
 
+.header-high {
+    height: 122px;
+    transition: .5s;
+}
+
+.header-divider {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    transition: .5s;
+}
 header {
+    background: white;
+    width: 100%;
+    transition: .5s;
+    position: fixed;
+
     .header-container {
+        transition: .5s;
         display: flex;
         align-items: center;
         justify-content: space-between;
 
+        .header-burger {
+            @media (min-width: 576.1px) {
+                display: none;
+            }
+        }
         .header-contacts {
-            display: inherit;
+            @media (max-width: 768px) {
+                flex-direction: column;
+                row-gap: 15px;
+                align-items: end;
+            }
+
+            @media (max-width: 576px) {
+                display: none;
+            }
+
+            display: flex;
             flex-direction: row;
             column-gap: 71px;
 
@@ -19,7 +51,11 @@ header {
 
             .contacts-mail {
                 text-align: right;
-                width: 213px;
+                width: 11.09375vw;
+
+                @media (max-width: 768px) {
+                    width: 25.26041666666667vw;
+                }
             }
 
             .contacts-phone {
@@ -29,7 +65,16 @@ header {
         }
     }
 
-    width: 100%;
-    transition: .5s;
-    position: fixed;
+    .collapse-container {
+        .card {
+            border: 0;
+            text-align: center;
+            align-items: center;
+
+            div + div {
+                margin-top: 20px;
+                margin-bottom: 40px;
+            }
+        }
+    }
 }
