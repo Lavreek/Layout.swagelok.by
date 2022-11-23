@@ -1,3 +1,12 @@
+.modal-dialog {
+    @media (max-width: 425px) {
+        margin: 0 9.4vw;
+    }
+    @media (max-width: 320px) {
+        margin: 0 20px;
+    }
+
+}
 .modal-content {
     border-radius: 24px !important;
 
@@ -11,6 +20,10 @@
         padding: 0 31px;
         padding-bottom: 53px;
 
+        @media (max-width: 576px) {
+            padding: 0 40px;
+        }
+
         .body-title {
             text-align: center;
             font-weight: 700;
@@ -23,14 +36,14 @@
         }
 
         .modal-form-offer {
-            display: grid;
-            grid-template-columns: 55% auto;
-            column-gap: 35px;
-
             .form-input-group {
-                display: flex;
-                flex-direction: column;
+                float: left;
                 align-items: center;
+
+                @media (max-width: 576px) {
+                    float: unset;
+                    margin-bottom: 34px;
+                }
 
                 .input-email {
                     margin-bottom: 15px;
@@ -41,7 +54,7 @@
                     font-weight: 400;
                     font-size: 15px;
                     line-height: 18px;
-
+                    width: 100%;
                     color: #004D9E;
                     margin-bottom: 10px;
                 }
@@ -50,18 +63,30 @@
                     height: 150px;
                 }
             }
+            .send-text {
+                float: right;
+                width: 45%;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 17px;
+
+                color: #004D9E;
+                margin-bottom: 8em;
+
+                @media (max-width: 576px) {
+                    width: 100%;
+                    float: unset;
+                    margin-bottom: 30px;
+                }
+            }
+
             .form-send-group {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
+                float: right;
 
-                .send-text {
-                    font-weight: 400;
-                    font-size: 15px;
-                    line-height: 17px;
-
-                    color: #004D9E;
+                @media (max-width: 576px) {
+                    float: unset;
+                    margin-bottom: 27px;
+                    text-align: center;
                 }
 
                 .btn-modal-send {

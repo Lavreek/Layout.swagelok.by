@@ -19,11 +19,19 @@ header {
     transition: .5s;
     position: fixed;
 
+    @media (min-width: 1921px) {
+        max-width: unset;
+    }
+
     .header-container {
         transition: .5s;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @media (min-width: 1921px) {
+            justify-content: space-evenly;
+        }
 
         .header-burger {
             @media (min-width: 576.1px) {
@@ -70,6 +78,7 @@ header {
             border: 0;
             text-align: center;
             align-items: center;
+            padding-top: 20px;
 
             div + div {
                 margin-top: 20px;

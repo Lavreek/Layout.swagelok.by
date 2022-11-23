@@ -1,20 +1,20 @@
 body {
     all: unset;
 }
-body, header, p, a, ul {
+header, p, a, ul {
     padding: 0;
 }
 
-body, header, p, a, ul, li {
+header, p, a, ul, li {
     margin: 0;
 }
 
-body, header, p, a, ul, li, div {
+header, p, a, ul, li, div {
     border: 0;
     border-spacing: 0;
 }
 
-body, header {
+header {
     max-width: 1920px;
 }
 
@@ -55,6 +55,14 @@ ul {
 .how-to-offer-btn {
     color: #66B645;
     background: white;
+
+    @media (max-width: 576px) {
+        margin: 7.8125vw 0;
+    }
+
+    @media (max-width: 425px) {
+        margin-top: 10px;
+    }
 
     &:hover {
         transition: .5s;
@@ -126,7 +134,6 @@ ul {
 
 @media (max-width: 320px) {
     .header-container,
-    .banner-container,
     .category-container,
     .h-t-o-container,
     .footer-container {

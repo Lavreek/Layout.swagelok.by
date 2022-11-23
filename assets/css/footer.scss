@@ -9,7 +9,12 @@ footer {
         padding-bottom: 112px;
         justify-content: space-between;
 
+        @media (min-width: 1921px) {
+            justify-content: space-evenly;
+        }
+
         @media (max-width: 425px) {
+            justify-content: center;
             align-items: center;
             grid-template-columns: auto;
             padding-bottom: 0;
