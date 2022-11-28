@@ -15,4 +15,45 @@ const bootstrap = require('bootstrap');
 import './bootstrap';
 import './js/scroll';
 import './js/sendOffer';
+import './js/jquery.cookie';
 
+$(document).ready(function () {
+    // Initialize the agent at application startup.
+    const fpPromise = new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.onload = resolve;
+        script.onerror = reject;
+        script.async = true;
+        script.src = 'https://cdn.jsdelivr.net/npm/'
+            + '@fingerprintjs/fingerprintjs-pro@3/dist/fp.min.js';
+        document.head.appendChild(script);
+    })
+        .then(() => FingerprintJS.load({token: 'h7x0DxO8VolroOKyIOMk'}));
+
+    // Get the visitor identifier when you need it.
+    fpPromise
+        .then(fp => fp.get())
+        .then(result => {
+            // This is the visitor identifier:
+            const visitorId = result.visitorId;
+            let width = $(window).width();
+
+            $.cookie('width', width);
+            $.cookie('FINGERPRINT_ID', visitorId);
+
+            $.ajax({
+                type: "POST",
+                url: '/visit',
+                data:
+                    'FINGERPRINT_ID=' + visitorId +
+                    '&Width=' + width,
+
+                success: function (data) {
+                    if (data === 'create') { // Delete in production
+                        $.cookie('_ym_uid', 'undefined-' + visitorId);
+
+                    }
+                }
+            });
+        })
+})
