@@ -82,6 +82,11 @@
                 line-height: 35px;
             }
 
+            @media (max-width: 425px) {
+                padding-top: 4.7vw;
+                font-size: 27px;
+            }
+
             @media (max-width: 320px) {
                 font-size: 26px;
                 line-height: 31px;
