@@ -87,6 +87,15 @@
 
                     img {
                         width: inherit;
+
+                        @media (max-width: 768px) {
+                            object-fit: cover;
+                            height: 194px;
+                        }
+
+                        @media (max-width: 425px) {
+                            height: 163px;
+                        }
                     }
                 }
 
