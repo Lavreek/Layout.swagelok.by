@@ -12,6 +12,16 @@
             @media (min-width: 1921px) {
                 margin-left: 7vw;
             }
+
+            @media (max-width: 1024px) {
+                padding-top: 55px;
+                padding-bottom: 41px;
+            }
+
+            @media (max-width: 768px) {
+                padding-top: 39px;
+                padding-bottom: 31px;
+            }
         }
         .category-grid {
             @media (min-width: 1921px) {
@@ -40,12 +50,21 @@
             column-gap: 70px;
 
             .category-frame {
+
                 @media (min-width: 1921px) {
                     width: 15vw;
                 }
 
                 @media (max-width: 1920px) {
-                    max-width: 213px;
+                    width: 11.6vw;
+                }
+
+                @media (max-width: 1440px) {
+                    width: 14.5vw;
+                }
+
+                @media (max-width: 1280px) {
+                    width: 14vw;
                 }
 
                 @media (max-width: 1024px) {
@@ -64,10 +83,19 @@
                 }
 
                 .image {
-                    width: 100%;
+                    width: inherit;
 
                     img {
                         width: inherit;
+
+                        @media (max-width: 768px) {
+                            object-fit: cover;
+                            height: 194px;
+                        }
+
+                        @media (max-width: 425px) {
+                            height: 163px;
+                        }
                     }
                 }
 

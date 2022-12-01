@@ -96,6 +96,10 @@ footer {
                 font-weight: 400;
                 font-size: 13px;
                 line-height: 15px;
+
+                @media (max-width: 425px) {
+                    padding-bottom: 0;
+                }
             }
         }
     }
