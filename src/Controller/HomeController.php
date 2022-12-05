@@ -38,7 +38,6 @@ class HomeController extends AbstractController
         if (isset($cookieData['_ym_uid'])) {
             $visit = $doctrine->getRepository(UserVisit::class);
             $client = $visit->findOneBy(['user_ym_uid' => $cookieData['_ym_uid']]);
-//            $client = false;
 
             if (!$client) {
                 $EntityManager = $doctrine->getManager();
@@ -139,7 +138,6 @@ class HomeController extends AbstractController
             }
 
             $UserRequest->setUserYmUid($cookieData['FINGERPRINT_ID']);
-
 
             $errors = $validator->validate($UserRequest);
 

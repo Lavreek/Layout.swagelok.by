@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\UserRequestRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: UserRequestRepository::class)]
 class UserRequest
@@ -15,9 +16,13 @@ class UserRequest
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $user_email = null;
+    #[Assert\NotNull]
+    #[Assert\NotBlank]
+    private string $user_email;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\NotNull]
+    #[Assert\NotBlank]
     private ?string $user_comment = null;
 
     #[ORM\Column(length: 15)]
