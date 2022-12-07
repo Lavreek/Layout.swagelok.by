@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\UserVisitRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 #[ORM\Entity(repositoryClass: UserVisitRepository::class)]
 class UserVisit
@@ -24,6 +25,7 @@ class UserVisit
     private ?string $user_geo = null;
 
     #[ORM\Column(length: 255, unique: true)]
+    #[UniqueEntity('user_ym_uid')]
     private ?string $user_ym_uid = null;
 
     #[ORM\Column(length: 255)]
