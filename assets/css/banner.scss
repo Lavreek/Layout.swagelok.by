@@ -1,6 +1,5 @@
 .banner {
-    background-image: url("/assets/main/banner-swagelok.png");
-    background-repeat: no-repeat;
+    background: url("/assets/main/banner-sw.jpg") top center no-repeat;
 
     @media (min-width: 1921px) {
         background-size: 100%;
@@ -8,61 +7,19 @@
         justify-content: space-evenly;
     }
 
-    @media (max-width: 1440px) {
-        margin-left: -85px;
-    }
-
-    @media (max-width: 1280px) {
-        margin-left: -250px;
-    }
-
-    @media (max-width: 1024px) {
-        margin-left: -500px;
-    }
-
     @media (max-width: 768px) {
-        margin-left: -765px;
+        background-position-x: -670px;
     }
 
     @media (max-width: 576px) {
-        margin-left: calc(-580px + 80vw);
-        background-image: url("/assets/main/banner-swagelok-md.png");
+        background-position-x: -820px;
     }
 
     @media (max-width: 425px) {
-        margin-left: unset;
-        background-image: url("/assets/main/banner-swagelok-sm.png");
-    }
-
-    @media (max-width: 320px) {
-        background-image: url("/assets/main/banner-swagelok-xsm.png");
+        background-position-x: -975px;
     }
 
     .banner-container {
-        @media (max-width: 1440px) {
-            margin-left: 85px;
-        }
-
-        @media (max-width: 1280px) {
-            margin-left: 250px;
-        }
-
-        @media (max-width: 1024px) {
-            margin-left: 500px;
-        }
-
-        @media (max-width: 768px) {
-            margin-left: 765px;
-        }
-
-        @media (max-width: 576px) {
-            margin-left: calc(410px - 40vw);
-        }
-
-        @media (max-width: 425px) {
-            margin-left: unset;
-        }
-
         @media (max-width: 375px) {
             padding: 20px;
         }
@@ -113,9 +70,8 @@
             }
 
             @media (max-width: 425px) {
-                width: 80%;
-                margin-left: 10%;
-                margin-right: 10%;
+                box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25);
+                width: 100%;
 
                 font-size: 21px;
                 line-height: 26px;

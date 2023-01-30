@@ -38,6 +38,7 @@
             }
 
             @media (max-width: 768px) {
+                justify-content: space-around;
                 grid-template-columns: repeat(2, auto);
             }
 

@@ -18,6 +18,7 @@
         .text-header h1 {
             color: #004D9E;
             margin-bottom: 40px;
+            text-align: center;
 
             @media (max-width: 768px) {
                 font-size: calc(1.375rem + 2.35vw);

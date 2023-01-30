@@ -74,7 +74,7 @@ Encore
     .copyFiles({
         from: './assets/main',
         to: 'main/[path][name].[ext]',
-        pattern: /\.(png|PNG|svg|SVG)$/
+        pattern: /\.(png|PNG|svg|SVG|jpg|JPG)$/
     })
     .copyFiles({
         from: './assets/categories',
